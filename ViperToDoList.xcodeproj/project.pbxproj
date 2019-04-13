@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3A5B60BB226020510053885F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60BA226020510053885F /* AppDelegate.swift */; };
-		3A5B60BD226020510053885F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60BC226020510053885F /* ViewController.swift */; };
-		3A5B60C0226020510053885F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B60BE226020510053885F /* Main.storyboard */; };
+		3A5B60BD226020510053885F /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60BC226020510053885F /* ToDoListViewController.swift */; };
+		3A5B60C0226020510053885F /* ToDoListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B60BE226020510053885F /* ToDoListView.storyboard */; };
 		3A5B60C3226020510053885F /* ViperToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60C1226020510053885F /* ViperToDoList.xcdatamodeld */; };
 		3A5B60C5226020550053885F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B60C4226020550053885F /* Assets.xcassets */; };
 		3A5B60C8226020550053885F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B60C6226020550053885F /* LaunchScreen.storyboard */; };
 		3A5B60D3226020550053885F /* ViperToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60D2226020550053885F /* ViperToDoListTests.swift */; };
 		3A5B60DE226020550053885F /* ViperToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60DD226020550053885F /* ViperToDoListUITests.swift */; };
+		3A5B60ED22617A580053885F /* ToDoListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60EC22617A580053885F /* ToDoListProtocols.swift */; };
+		3A5B60F0226180100053885F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60EF226180100053885F /* ToDoItem.swift */; };
+		3A5B60F222618A7F0053885F /* ToDoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60F122618A7F0053885F /* ToDoListPresenter.swift */; };
+		3A5B60F422618B990053885F /* ToDoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60F322618B990053885F /* ToDoListInteractor.swift */; };
+		3A5B60F6226193880053885F /* ToDoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60F5226193880053885F /* ToDoListRouter.swift */; };
+		3A5B60F92262105E0053885F /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60F82262105E0053885F /* CoreDataStore.swift */; };
+		3A5B60FB226211600053885F /* ToDoListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B60FA226211600053885F /* ToDoListWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +44,8 @@
 /* Begin PBXFileReference section */
 		3A5B60B7226020510053885F /* ViperToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5B60BA226020510053885F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A5B60BC226020510053885F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A5B60BF226020510053885F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A5B60BC226020510053885F /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		3A5B60BF226020510053885F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ToDoListView.storyboard; sourceTree = "<group>"; };
 		3A5B60C2226020510053885F /* ViperToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViperToDoList.xcdatamodel; sourceTree = "<group>"; };
 		3A5B60C4226020550053885F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A5B60C7226020550053885F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		3A5B60D9226020550053885F /* ViperToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5B60DD226020550053885F /* ViperToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperToDoListUITests.swift; sourceTree = "<group>"; };
 		3A5B60DF226020550053885F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5B60EC22617A580053885F /* ToDoListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListProtocols.swift; sourceTree = "<group>"; };
+		3A5B60EF226180100053885F /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		3A5B60F122618A7F0053885F /* ToDoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListPresenter.swift; sourceTree = "<group>"; };
+		3A5B60F322618B990053885F /* ToDoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListInteractor.swift; sourceTree = "<group>"; };
+		3A5B60F5226193880053885F /* ToDoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListRouter.swift; sourceTree = "<group>"; };
+		3A5B60F82262105E0053885F /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		3A5B60FA226211600053885F /* ToDoListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +113,9 @@
 		3A5B60B9226020510053885F /* ViperToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				3A5B60F7226210530053885F /* Commom */,
+				3A5B60EB226179CB0053885F /* Modules */,
 				3A5B60BA226020510053885F /* AppDelegate.swift */,
-				3A5B60BC226020510053885F /* ViewController.swift */,
-				3A5B60BE226020510053885F /* Main.storyboard */,
 				3A5B60C4226020550053885F /* Assets.xcassets */,
 				3A5B60C6226020550053885F /* LaunchScreen.storyboard */,
 				3A5B60C9226020550053885F /* Info.plist */,
@@ -126,6 +140,37 @@
 				3A5B60DF226020550053885F /* Info.plist */,
 			);
 			path = ViperToDoListUITests;
+			sourceTree = "<group>";
+		};
+		3A5B60EB226179CB0053885F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3A5B60EE22617FF80053885F /* Entities */,
+				3A5B60BC226020510053885F /* ToDoListViewController.swift */,
+				3A5B60BE226020510053885F /* ToDoListView.storyboard */,
+				3A5B60EC22617A580053885F /* ToDoListProtocols.swift */,
+				3A5B60F122618A7F0053885F /* ToDoListPresenter.swift */,
+				3A5B60F322618B990053885F /* ToDoListInteractor.swift */,
+				3A5B60F5226193880053885F /* ToDoListRouter.swift */,
+				3A5B60FA226211600053885F /* ToDoListWorker.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3A5B60EE22617FF80053885F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3A5B60EF226180100053885F /* ToDoItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3A5B60F7226210530053885F /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				3A5B60F82262105E0053885F /* CoreDataStore.swift */,
+			);
+			path = Commom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +279,7 @@
 			files = (
 				3A5B60C8226020550053885F /* LaunchScreen.storyboard in Resources */,
 				3A5B60C5226020550053885F /* Assets.xcassets in Resources */,
-				3A5B60C0226020510053885F /* Main.storyboard in Resources */,
+				3A5B60C0226020510053885F /* ToDoListView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A5B60BD226020510053885F /* ViewController.swift in Sources */,
+				3A5B60F92262105E0053885F /* CoreDataStore.swift in Sources */,
+				3A5B60F222618A7F0053885F /* ToDoListPresenter.swift in Sources */,
+				3A5B60BD226020510053885F /* ToDoListViewController.swift in Sources */,
+				3A5B60FB226211600053885F /* ToDoListWorker.swift in Sources */,
+				3A5B60F6226193880053885F /* ToDoListRouter.swift in Sources */,
+				3A5B60F422618B990053885F /* ToDoListInteractor.swift in Sources */,
+				3A5B60ED22617A580053885F /* ToDoListProtocols.swift in Sources */,
+				3A5B60F0226180100053885F /* ToDoItem.swift in Sources */,
 				3A5B60C3226020510053885F /* ViperToDoList.xcdatamodeld in Sources */,
 				3A5B60BB226020510053885F /* AppDelegate.swift in Sources */,
 			);
@@ -297,12 +349,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3A5B60BE226020510053885F /* Main.storyboard */ = {
+		3A5B60BE226020510053885F /* ToDoListView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3A5B60BF226020510053885F /* Base */,
 			);
-			name = Main.storyboard;
+			name = ToDoListView.storyboard;
 			sourceTree = "<group>";
 		};
 		3A5B60C6226020550053885F /* LaunchScreen.storyboard */ = {
@@ -437,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER489438ZX;
 				INFOPLIST_FILE = ViperToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER489438ZX;
 				INFOPLIST_FILE = ViperToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
